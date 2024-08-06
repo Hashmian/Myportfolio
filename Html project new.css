@@ -133,7 +133,6 @@ section {
     }
 }
 
-
 .btn {
     background-color: #00f;
     color: #fff;
@@ -208,7 +207,6 @@ nav ul li a {
     cursor: pointer;
    
 }
-
 
 @media (max-width: 768px) {
     nav ul {
@@ -663,133 +661,163 @@ transition:box-shadow 0.3s ease, transform 0.3s ease;
 }
 
   /* my-work */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-}
-
 .my-work {
     text-align: center;
     padding: 20px;
 }
 
-.my-work h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
 .home {
     display: inline-block;
     margin-bottom: 20px;
-    font-size: 1.2em;
-    color: #ffffff;
     text-decoration: none;
-    transition: transform 0.3s;
-    margin-right: 835px;
+    color: #a996ee;
+    font-size: 20px;
+    margin-right: 300px;
 }
-.home:hover{
-    transform: scale(1.05);
-    color: red;
+.home::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: red;
+    transition: width 0.3s ease;
+  }
+  
+  .home:hover::after {
+    width: 14%;
+    right: auto;
+  }
+
+.home i {
+    margin-right: 5px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .work-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
 }
 
 .work-item {
-    background-color: #232020;
-    border: 1px solid #ddd;
+    background-color: #272525;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 11px blue;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgb(8, 1, 99);
-    transition: transform 0.3s;
-    width: 300px;
-    height: auto;
-}
-
-.work-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgb(8, 1, 99)
-
+    max-width: 300px;
+    flex: 1 1 300px;
+    box-sizing: border-box;
 }
 
 .work-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 .description {
-    padding: 15px;
-    font-size: 1em;
-    color: #ffffff;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
 }
 
 .rating {
-    font-size: 1.5em;
-    color: #f39c12;
-    padding: 10px 0;
+    font-size: 18px;
+    color: #ffa500;
 }
+
 
 .visit-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    margin: 10px 0;
-    font-size: 1em;
+    width: 100px;
+    height: 40px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.visit-button a {
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
     color: white;
-    text-decoration: none;
-}
-
-.visit-button:hover {
-    background-color: #2980b9;
-    box-shadow: 0 8px 10px pink;
-}
+    background: linear-gradient(90deg, #0800ff, #ff6600);
+    box-shadow: 0 4px 15px rgba(255, 0, 102, 0);
+    transition:box-shadow 0.3s ease, transform 0.3s ease;
+    
+    }
+    .visit-button a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .visit-button:hover {
+       box-shadow:0 8px 15px rgba(255, 0, 102, 5);
+       transform: translate(-3px);
+    }
 
 .like-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
+    margin-top: 10px;
 }
 
 .like-container i {
-    color: #e74c3c;
-    font-size: 1.5em;
+    color: #ff0000;
     cursor: pointer;
     margin-right: 5px;
 }
 
-.like-container .like-count {
-    font-size: 1.2em;
-    color: #555;
+.like-count {
+    font-size: 16px;
 }
 
-@media (max-width: 768px) {
-    .work-container {
-        flex-direction: column;
-        align-items: center;
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .home {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
     }
 
     .work-item {
-        width: 90%;
-        margin-bottom: 20px;
+        margin: 5px;
+        padding: 10px;
+        max-width: 100%;
     }
 
-    .my-work h1 {
-        font-size: 2em;
+    .description {
+        font-size: 14px;
+    }
+
+    .rating {
+        font-size: 16px;
+    }
+
+    .visit-button a {
+        padding: 8px 16px;
+    }
+
+    .like-container i {
+        font-size: 20px;
+    }
+
+    .like-count {
+        font-size: 14px;
     }
 }
