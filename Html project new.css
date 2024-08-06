@@ -724,7 +724,7 @@ h1 {
 .description {
     margin: 10px 0;
     font-size: 16px;
-    color:#b3b0b0;
+    color: #b3b0b0;
 }
 
 .rating {
@@ -820,9 +820,8 @@ h1 {
     .like-count {
         font-size: 14px;
     }
-        .home:hover::after {
+    .home:hover::after {
         width: 15%;
         right: auto;
       }
-}
 }
