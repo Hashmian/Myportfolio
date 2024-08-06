@@ -820,4 +820,9 @@ h1 {
     .like-count {
         font-size: 14px;
     }
+        .home:hover::after {
+        width: 15%;
+        right: auto;
+      }
+}
 }
