@@ -686,7 +686,7 @@ transition:box-shadow 0.3s ease, transform 0.3s ease;
   }
   
   .home:hover::after {
-    width: 14%;
+    width: 7%;
     right: auto;
   }
 
